@@ -1,0 +1,184 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #f0f0f0; /* Add your preferred background color */
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navList {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  
+}
+
+.navList li {
+  margin: 0;
+  
+}
+
+.navList a {
+  text-decoration: none;
+  color: #000000; /* Add your preferred text color */
+  font-weight: 650;
+
+}
+.navList a:hover{
+  color: #c5bf65; /* Add your preferred text color */
+
+}
+
+.subdiv{}
+
+.cardo {
+  height: auto;
+  border: none; /* Remove the default border */
+  background-color: #ffffff;
+  border-radius: 20px;
+
+  display: flex;
+  justify-content: space-between;
+  /* Add any other styling properties as needed */
+}
+.cardborder {
+  background-image: linear-gradient(180deg, #a07b02, #d3bc58, #ffffff);
+  width:auto;
+  height: auto;
+  display: fixed;
+
+
+  padding: 2px 2px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 1px;
+  -ms-border-radius: 1px;
+  background-size: 100% 100%;
+  margin-top: 70px;
+margin-left: 10%;
+margin-right: 10%;
+padding-left: 1%;
+
+
+
+}
+
+
+
+
+.column {
+  width:50% ;
+  height: 100%;
+  padding-left: 20px;
+  align-content: start;
+  display: grid;
+
+}
+.column2 {
+  width:100% ;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+.cardborder2 {
+  position: relative;
+  background-color: #999;
+  background-image: linear-gradient(180deg, #383838, #575757, #ffffff);
+  padding: 2px 2px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+
+
+.cardborder2:hover {
+  position: relative;
+  background-color: #999;
+  background-image: linear-gradient(180deg, #8b8b8bc2, #acacac, #ffffff);
+  padding: 2px 2px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+
+
+.cardborder2:focus-within
+ {
+  background-color: #999;
+  background-image: linear-gradient(180deg, #a07b02, #d3bc58, #ffffff);
+  padding: 2px 2px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+.inptg {
+  width: 100%;
+  height:  100%;
+
+  padding: 10px;
+  background: #fff;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  padding-top:  16px;
+
+}
+
+.hint {
+  position: absolute;
+
+  left: 12px;
+  color: #999;
+  font-size: 14px;
+  pointer-events: none; /* Ensure the hint doesn't interfere with input events */
+  transition: top 0.3s ease, left 0.3s ease, font-size 0.3s ease;
+ }
+
+.inptg:focus + .hint {
+  top: 5px;
+  left: 5px;
+  font-size: 10px;
+
+}
+.inptg:not(:placeholder-shown) + .hint {
+  top: 5px;
+  left: 5px;
+  font-size: 10px;}
+
+.inptg:focus + .hint {
+  display: block; /* Hide the hint when the input is not empty */
+
+}
+
+.inptg:not(:placeholder-hid) + .hint {
+  display: none; /* Hide the hint when the input is not empty */
+}
