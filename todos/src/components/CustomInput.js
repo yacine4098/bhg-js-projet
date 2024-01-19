@@ -1,5 +1,8 @@
 import React, { useRef, useEffect } from 'react';
 
+import styles from '@/styles/Custominput.module.css'
+
+
 const CustomInput = ({ id, hint = 'Your Hint Text', type = 'text', multi = false, className, value, onChange, autoFocus }) => {
   const inputRef = useRef(null);
 
@@ -14,11 +17,11 @@ const CustomInput = ({ id, hint = 'Your Hint Text', type = 'text', multi = false
   };
 
   return (
-    <div className={`cardborder2 ${className}`}>
+    <div className={`${styles.cardborder2} ${className}`}>
       {multi ? (
         <textarea
           ref={inputRef}
-          className='inptg'
+          className={styles.inptg}
           name={id}
           id={id}
           placeholder=''
@@ -29,7 +32,7 @@ const CustomInput = ({ id, hint = 'Your Hint Text', type = 'text', multi = false
       ) : (
         <input
           ref={inputRef}
-          className='inptg'
+          className={styles.inptg}
           type={type}
           name={id}
           id={id}
@@ -38,7 +41,7 @@ const CustomInput = ({ id, hint = 'Your Hint Text', type = 'text', multi = false
           onChange={handleChange}
         />
       )}
-      <span className='hint'>{hint}</span>
+      <span className={styles.hint}>{hint}</span>
     </div>
   );
 };

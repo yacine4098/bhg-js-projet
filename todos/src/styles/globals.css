@@ -2,183 +2,321 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+/* All  */
+::selection {
+  background-color: #caa200; /* Set the background color */
+  color: #000000; /* Set the text color */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
 
-body {
-  color: rgb(var(--foreground-rgb));
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  background-color: #f0f0f0; /* Add your preferred background color */
-}
-
-.logo {
-  font-size: 1.5rem;
+a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
   font-weight: bold;
 }
 
-.navList {
-  list-style: none;
+a:hover {
+  color :#CAA131 ;
+}
+
+img {
+  cursor: pointer;
+
+}
+/* __________________________________  */
+
+
+
+.scroll-container {
   display: flex;
-  gap: 1rem;
-  
-}
-
-.navList li {
-  margin: 0;
-  
-}
-
-.navList a {
-  text-decoration: none;
-  color: #000000; /* Add your preferred text color */
-  font-weight: 650;
-
-}
-.navList a:hover{
-  color: #c5bf65; /* Add your preferred text color */
-
-}
-
-.subdiv{}
-
-.cardo {
-  height: auto;
-  border: none; /* Remove the default border */
-  background-color: #ffffff;
-  border-radius: 20px;
-
-  display: flex;
-  justify-content: space-between;
-  /* Add any other styling properties as needed */
-}
-.cardborder {
-  background-image: linear-gradient(180deg, #a07b02, #d3bc58, #ffffff);
-  width:auto;
-  height: auto;
-  display: fixed;
-
-
-  padding: 2px 2px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 1px;
-  -ms-border-radius: 1px;
-  background-size: 100% 100%;
-  margin-top: 70px;
-margin-left: 10%;
-margin-right: 10%;
-padding-left: 1%;
-
-
-
+  overflow-x: auto;
+  white-space: nowrap;
+  scroll-snap-type: x mandatory;
 }
 
 
 
 
-.column {
-  width:50% ;
-  height: 100%;
-  padding-left: 20px;
-  align-content: start;
+@media screen and (max-width: 640px) {
+  .text-3xl {
+    font-size: 1.125rem;
+  }
+}
+
+/* CSS for the parent grid container */
+.grid-container {
   display: grid;
-
+  grid-template-columns: repeat(1, minmax(0, 1fr)); /* Default, for small screens */
+  gap: 2rem; /* Adjust as needed */
+  padding: 1rem; /* Adjust as needed */
+  justify-items: center;
 }
-.column2 {
-  width:100% ;
-  height: 100%;
+
+/* Responsive styles for medium screens (md) */
+@media (min-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-container {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+
+/* Responsive styles for large screens (lg) */
+@media (min-width: 1350px) {
+  .grid-container {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* Margin styles */
+.mx-10 {
+  margin-left: 2.5rem; /* Adjust as needed */
+  margin-right: 2.5rem; /* Adjust as needed */
+}
+
+/* Utility class for setting padding */
+.p-4 {
+  padding: 1rem; /* Adjust as needed */
+}
+
+.line{
+  width: auto;
+}
+
+/* Invest Section  */
+
+.containerimg {
+
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-
-
 }
 
-.cardborder2 {
-  position: relative;
-  background-color: #999;
-  background-image: linear-gradient(180deg, #383838, #575757, #ffffff);
-  padding: 2px 2px;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
+.btn-invest{
+  background-color : #CAA131 ;
+  color: #000000;
+  border-radius: 5px;
+}
+.btn-invest:hover {
+  background-color : #caa131c9 ;
 }
 
+/* __________________________  */
 
-.cardborder2:hover {
-  position: relative;
-  background-color: #999;
-  background-image: linear-gradient(180deg, #8b8b8bc2, #acacac, #ffffff);
-  padding: 2px 2px;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-}
+/* index section */
 
 
-.cardborder2:focus-within
- {
-  background-color: #999;
-  background-image: linear-gradient(180deg, #a07b02, #d3bc58, #ffffff);
-  padding: 2px 2px;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-}
-.inptg {
+
+
+.img {
+  height: 100%;
   width: 100%;
-  height:  100%;
-
-  padding: 10px;
-  background: #fff;
-  border-radius: 10px;
-  border: none;
-  outline: none;
-  padding-top:  16px;
-
+  object-fit: cover;
 }
 
-.hint {
+.overlayText {
   position: absolute;
+  margin-left: 15%;
+  left: 0px;
+  z-index: 2;
+  font-weight:400 ;
+  font-size: 30px;
+  color: #ffcc00c9;
+}
+.overlayText2 {
+  position: absolute;
+margin-left: 15%;
+left: 0px;
+  z-index: 2;
+  font-weight: bold;
+  font-size: 40px;
+  color: #ffcc00;
 
-  left: 12px;
-  color: #999;
-  font-size: 14px;
-  pointer-events: none; /* Ensure the hint doesn't interfere with input events */
-  transition: top 0.3s ease, left 0.3s ease, font-size 0.3s ease;
- }
-
-.inptg:focus + .hint {
-  top: 5px;
-  left: 5px;
-  font-size: 10px;
+}.overlayText3 {
+  position: absolute;
+  margin-left: 15%;
+  left: 0px;
+  top:50% ;
+  z-index: 2;
+  font-weight :400;
+  font-size: 26px;
+  color: #ffffff;
 
 }
-.inptg:not(:placeholder-shown) + .hint {
-  top: 5px;
-  left: 5px;
-  font-size: 10px;}
+.overlayButton{
+  position: absolute;
+  z-index: 3;
+  background-color : #CAA131 ;
+  color: #000000;
+  font-weight: 700;
+  border-radius: 5px;
+  bottom: 10%;
+  margin-left: 15%;
+  left: 0px;
+  font-size: 22px;
+}
 
-.inptg:focus + .hint {
-  display: block; /* Hide the hint when the input is not empty */
+.overlayButton:hover{
+  background-color : #f0b619 ;
 
 }
 
-.inptg:not(:placeholder-hid) + .hint {
-  display: none; /* Hide the hint when the input is not empty */
+.overlayimg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  background-color: #000000;
+  opacity: 0.3;
 }
+
+.arrow-icons {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 2;
+  color: #ffffff;
+}
+
+.prev-icon,
+.next-icon {
+  height: 50px;
+  cursor: pointer;
+}
+
+/* Optional: Style the icons as needed */
+.prev-icon:hover,
+.next-icon:hover {
+  color: #ffcc00; /* Change the color on hover */
+}
+
+
+.imgslide {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 350px; /* Set the desired height for the container */
+  overflow: hidden; /* Ensure the content doesn't overflow */
+}
+/* Styles for medium-sized devices and larger */
+@media screen and (min-width: 768px) {
+  .overlayText {
+    margin-left: 19%;
+    left: 0px;
+
+    font-weight:400 ;
+    font-size: 35px;
+  }
+  .overlayText2 {
+  margin-left: 19%;
+  left: 0px;
+    font-weight: bold;
+    font-size: 43px;
+  
+  }.overlayText3 {
+    margin-left: 19%;
+    left: 0px;
+    top: 30%;
+    z-index: 2;
+    font-weight: 400;
+    font-size: 34px;
+  }
+  .imgslide {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px; /* Set the desired height for the container */
+    overflow: hidden; /* Ensure the content doesn't overflow */
+  }
+  .overlayButton{
+  
+    margin-left: 19%;
+    left: 0px;
+  }
+  
+}
+
+
+
+
+
+
+@media screen and (min-width: 1024px) {
+  .overlayText {
+    margin-left: 24%;
+    left: 0px;
+
+
+    font-weight:400 ;
+    font-size: 39px;
+  }
+  .overlayText2 {
+    margin-left: 24%;
+  left: 0px;
+    font-weight: bold;
+    font-size: 50px;
+  
+  }.overlayText3 {
+    margin-left: 24%;
+    left: 0px;
+    top : 35% ;
+    z-index: 2;
+    font-weight: 400;
+    font-size: 37px;
+  }
+  .overlayButton{
+  
+    margin-left: 24%;
+    left: 0px;
+  }
+}
+
+
+@media screen and (min-width: 1500px) {
+  .overlayText {
+    margin-left: 22%;
+    left: 0px;
+
+    font-weight:500 ;
+    font-size: 45px;
+  }
+  .overlayText2 {
+    margin-left: 22%;
+    margin-top: 20px;
+  left: 0px;
+
+    font-weight: bold;
+    font-size: 60px;
+  
+  }.overlayText3 {
+    margin-left: 22%;
+    left: 0px;
+    top : 40% ;
+
+    z-index: 2;
+    font-weight: 400;
+    font-size: 42px;
+  }
+  .overlayButton{
+  
+    margin-left: 0%;
+    left: 45%;
+    padding-left: 55px;
+    padding-right: 55px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    font-size: 27px;
+  }
+}
+

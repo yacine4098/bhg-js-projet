@@ -1,0 +1,91 @@
+/* styles/Footer.module.css */
+
+.footer {
+    height: 400px;
+    width: 100%;
+    background-color: black;
+    color: white; /* Optional: Set text color */
+  }
+  
+  /* First row styles */
+  .footerRow {
+    display: flex;
+    height: 90%;
+  }
+    .footerColumn {
+      display: flex;
+      flex-direction: column;
+    flex: 1;
+    height: 100%;
+    gap: 15px;
+
+  }
+
+  .footerColumn1 {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+  
+  }
+  .h1{
+    margin-left: 10%;
+    color: #C39711;
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 30px;
+
+  }
+  .h11{
+    margin-left: 10%;
+    color: #C39711;
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 8px;
+
+  }
+
+  /* Second row styles */
+  .horizontalList {
+    display: flex;
+    height: 10%;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .horizontalList span {
+    margin: 0 20px; /* Add space between each list item */
+  }
+  
+  .rowicons{
+    display: flex;
+    flex-direction: row;
+    margin-left: 12%;
+    gap: 3px;
+
+  }
+
+  .rowicons2{
+    display: flex;
+    flex-direction: row;
+    margin-left: 10%;
+    margin-top: 10px;
+
+  }
+
+  .pLocation{
+    text-overflow: ellipsis;
+    max-width: 35ch;
+    line-height: 1;
+    font-weight: 400;
+    cursor: pointer;
+
+  }
+
+  .pLocation:hover{
+
+  }

@@ -1,0 +1,29 @@
+.cardo {
+    height: 480px;
+    border-radius: 20px;
+    background: #ffffff;
+    border-color: #82671D;
+    overflow-x: auto; /* Add this line to allow horizontal overflow */
+    white-space: nowrap; /* Add this line to prevent text wrapping */
+  
+    /* Add any other styling properties as needed */
+  }
+  .imgC{
+    border-radius: 20px 20px 0px 0px;}
+  
+    .contcard {
+      top: 50%;
+      left: 50%;
+      max-width: 400px;
+      min-width: 300px;
+      padding: 1px 1px;
+      background-image: linear-gradient(180deg, #bd9100, #f3d552, #f1f1c1);
+      border-radius: 20px;
+      -webkit-border-radius: 20px;
+      -moz-border-radius: 20px;
+      -ms-border-radius: 20px;
+      background-size: 100% 100%;
+      overflow-x: auto; /* Add this line to allow horizontal overflow */
+      white-space: nowrap; /* Add this line to prevent text wrapping */
+    }
+    

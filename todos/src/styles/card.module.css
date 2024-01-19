@@ -1,0 +1,190 @@
+.cardborder {
+    background-image: linear-gradient(172deg, #a07b02, #f3cf2d, #f0edde);
+    width:auto;
+    height: auto;
+    display: fixed;
+  
+  
+    padding: 2px 2px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 1px;
+    -ms-border-radius: 1px;
+    background-size: 100% 100%;
+    margin-top: 70px;
+  margin-left: 10%;
+  margin-right: 10%;
+  
+  
+  
+  }
+  
+  
+  
+  
+  .column {
+    width:50% ;
+    height: 100%;
+    padding-left: 20px;
+    align-content: start;
+    display: grid;
+    flex:1
+  
+  }
+  .column2 {
+    width:100% ;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex:2
+  
+  
+  }
+  
+  
+  
+  .btnb {
+    position:relative;
+    background-color: #ffffff;
+    border-width: 1px;
+    border-color: #fff6da;
+    color: black;
+    font-weight: bold;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    height: 50px;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    
+  }
+  
+  
+  .cardo {
+    position: relative;
+    height: auto;
+    border: none;
+    background-color: #ffffff;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    grid-template-rows: auto 1fr; /* Two rows: auto for the first row, 1fr for the second row */
+    gap: 20px; /* Adjust the gap between the rows */
+  }
+  .row {
+    display: flex;
+    padding-top: 2%;
+  padding-left: 5%;
+  padding-right: 5%;
+    width: 100%;
+    flex-direction: row;
+  }
+  
+  .row2 {
+    width: 100%;
+    flex-direction: row;
+  }
+  
+  .btnb:hover {
+    background-color: #a07b029d; /* Add your desired hover color */
+  }
+  
+  .imgslide{
+
+position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .img{
+    opacity: 0.5;
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+  }
+  .overlayText {
+    position: absolute;
+    top: 50%; /* Adjust this value to vertically center the text */
+    left: 50%; /* Adjust this value to horizontally center the text */
+    transform: translate(-50%, -50%);
+    z-index: 1; /* Ensure the text appears above the image */
+    font-weight: bold;
+    font-size: 40px;
+    color: #08080896;
+  }
+
+  .phoneIcon {
+    display: inline-block;
+  }
+  
+  .normalIcon,
+  .hoverIcon {
+    width: 40px; /* Adjust this value to set the width of the phone icons */
+    height: 40px; /* Adjust this value to set the height of the phone icons */
+  }
+  
+  .hoverIcon {
+    display: none; /* Initially hide the hover icon */
+  }
+  
+  .phoneIcon:hover .normalIcon {
+    display: none; /* Hide normal icon on hover */
+  }
+  
+  .phoneIcon:hover .hoverIcon {
+    display: inline-block; /* Display hover icon on hover */
+  }
+
+  .messIcon {
+    display: inline-block;
+  }
+  
+  .normalIcon2,
+  .hoverIcon2 {
+    width: 42px; /* Adjust this value to set the width of the phone icons */
+    height: 42px; /* Adjust this value to set the height of the phone icons */
+  }
+  
+  .hoverIcon2 {
+    display: none; /* Initially hide the hover icon */
+  }
+  
+  .messIcon:hover .normalIcon2 {
+    display: none; /* Hide normal icon on hover */
+  }
+  
+  .messIcon:hover .hoverIcon2 {
+    display: inline-block; /* Display hover icon on hover */
+  }
+.divContact{
+  padding-left:20px ;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 20px;
+  display: flex;
+  position: absolute;
+  z-index: 2; /* Ensure the phone icon appears above the image and text */
+left: calc(50%-120px);
+bottom: 10px;
+  background-color: #b3b3b3c0 ;
+
+  border-radius: 20px;
+}
+  
+.clm{
+  height:350px;
+  width: 30%;
+  background-color: #d8d8d8;
+  border-radius: 11px;
+  display:flex;
+  flex-direction: column;
+}
+.clm2{
+  height:350px;
+  width: 30%;
+  background-color: #313131;
+  border-radius: 11px;
+  display:flex;
+  flex-direction: column;
+}

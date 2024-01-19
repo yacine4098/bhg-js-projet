@@ -1,0 +1,73 @@
+.cardborder2 {
+    position: relative;
+    background-color: #999;
+    background-image: linear-gradient(180deg, #383838, #575757, #ffffff);
+    padding: 3px 3px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  
+  .cardborder2:hover {
+    position: relative;
+    background-color: #999;
+    background-image: linear-gradient(180deg, #8b8b8bc2, #acacac, #ffffff);
+    padding: 3px 3px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  
+  .cardborder2:focus-within
+   {
+    background-color: #999;
+    background-image: linear-gradient(180deg, #a07b02, #d3bc58, #ffffff);
+    padding: 3px 3px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+  }
+  .inptg {
+    width: 100%;
+    height:  100%;
+  
+    padding: 10px;
+    background: #fff;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    padding-top:  16px;
+  
+  }
+  
+  .hint {
+    position: absolute;
+  
+    left: 12px;
+    color: #999;
+    font-size: 14px;
+    pointer-events: none; /* Ensure the hint doesn't interfere with input events */
+    transition: top 0.3s ease, left 0.3s ease, font-size 0.3s ease;
+   }
+  
+  .inptg:focus + .hint {
+    top: 5px;
+    left: 5px;
+    font-size: 10px;
+  
+  }
+  .inptg:not(:placeholder-shown) + .hint {
+    top: 5px;
+    left: 5px;
+    font-size: 10px;}
+  
+  .inptg:focus + .hint {
+    display: block; /* Hide the hint when the input is not empty */
+  
+  }
+  
+  .inptg:not(:placeholder-hid) + .hint {
+    display: none; /* Hide the hint when the input is not empty */
+  }

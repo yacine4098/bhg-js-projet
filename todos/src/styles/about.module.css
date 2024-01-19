@@ -1,0 +1,50 @@
+.whoare{
+    background-color: #CEB675 ;
+    height: 60px;
+    width: 100%;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  
+    
+  
+  }
+
+  .twoColumnContainer {
+    display: flex;
+    flex-direction: column; /* Start as a single column layout */
+  }
+  
+  .textContainer,
+  .imageContainer {
+    width: 100%;
+    padding: 40px;
+    color: 'black';
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Optional: Center horizontally */
+  
+  }
+  
+  .imageContainer img {
+    max-width: 75%;
+    height: auto;
+    border-radius: 11px;
+  }
+  
+  
+  
+  
+  @media (min-width: 1200px) {
+    /* Switch to a two-column layout on screens wider than 768px */
+    .twoColumnContainer {
+      flex-direction: row;
+    }
+  
+    .textContainer,
+    .imageContainer {
+      width: 50%;
+    }
+  }
+  
