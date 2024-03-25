@@ -1,10 +1,164 @@
 /* styles/Footer.module.css */
 
-.footer {
+
+/* Responsive styles for screens smaller than 768px */
+@media screen and (max-width: 767px) {
+  .footer {
+
+    width: 100%;
+    background-color: black;
+    color: white; /* Optional: Set text color */
+    padding-bottom: 15px;
+  }
+  
+  /* First row styles */
+  .footerRow {
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+  }
+    .footerColumn {
+      display: flex;
+      flex-direction: column;
+    flex: 1;
+    height: 100%;
+    gap: 10px;
+order: 1;
+  }
+
+  .footerColumn1 {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+  
+  }
+  .h1{
+    margin-left: 10%;
+    color: #C39711;
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 30px;
+    order:5 ; 
+
+  }
+
+
+  .h11{
+    margin-left: 10%;
+    color: #C39711;
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 8px;
+    order: 1;
+  }
+  .h12{
+    margin-left: 10%;
+    color: #C39711;
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 8px;
+    order: 3;
+  }
+
+  /* Second row styles */
+  .horizontalList {
+    display: flex;
+    height: 10%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .horizontalList a {
+font-weight: 450;
+cursor: pointer;
+font-size: medium;
+margin: 0 10px; /* Add space between each list item */
+
+  }
+
+  
+
+  
+  .rowicons{
+    display: flex;
+    flex-direction: row;
+    margin-left: 12%;
+    gap: 3px;
+order: 6;
+  }
+
+  .rowicons2{
+    display: flex;
+    flex-direction: row;
+    margin-left: 10%;
+    margin-top: 10px;
+order:2
+  }
+
+  .rowicons3{
+    display: flex;
+    flex-direction: row;
+    margin-left: 10%;
+    margin-top: 10px;
+order:3
+  }
+
+  .pLocation{
+    text-overflow: ellipsis;
+    max-width: 35ch;
+    line-height: 1;
+    font-weight: 400;
+    cursor: pointer;
+
+  }
+
+  .pMail{
+    text-overflow: ellipsis;
+    max-width: 35ch;
+    font-weight: 400;
+    cursor: pointer;
+margin-left: 10px;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+
+  }
+  .pLocation:hover{
+
+  }
+  .hLine{
+    width: 100%;
+
+display: flex;
+margin-top: 20px;
+  }
+  .hLine2{
+    background-color: rgb(150, 150, 150);
+    width: 80%;
+    height: 1px;
+    margin:  auto; 
+    margin-bottom:10px ;
+
+  }
+
+
+
+
+}
+
+/* Responsive styles for screens between 768px and 1024px */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .footer {
+
     height: 400px;
     width: 100%;
     background-color: black;
     color: white; /* Optional: Set text color */
+    padding-bottom: 15px;
   }
   
   /* First row styles */
@@ -56,10 +210,17 @@
     justify-content: center;
     align-items: center;
   }
-  
-  .horizontalList span {
-    margin: 0 20px; /* Add space between each list item */
+
+  .horizontalList a {
+font-weight: 500;
+cursor: pointer;
+font-size: medium;
+margin: 0 20px; /* Add space between each list item */
+
   }
+
+  
+
   
   .rowicons{
     display: flex;
@@ -86,6 +247,164 @@
 
   }
 
+  .pMail{
+    text-overflow: ellipsis;
+    max-width: 35ch;
+    font-weight: 400;
+    cursor: pointer;
+margin-left: 10px;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+
+  }
   .pLocation:hover{
 
   }
+  .hLine{
+    width: 100%;
+
+display: flex;
+  }
+  .hLine2{
+    background-color: rgb(150, 150, 150);
+    width: 80%;
+    height: 1px;
+    margin:  auto; 
+    margin-bottom:10px ;
+
+  }
+
+
+}
+
+/* Responsive styles for screens larger than 1024px */
+@media screen and (min-width: 1025px) {
+  .footer {
+
+    height: 400px;
+    width: 100%;
+    background-color: black;
+    color: white; /* Optional: Set text color */
+    padding-bottom: 15px;
+  }
+  
+  /* First row styles */
+  .footerRow {
+    display: flex;
+    height: 90%;
+  }
+    .footerColumn {
+      display: flex;
+      flex-direction: column;
+    flex: 1;
+    height: 100%;
+    gap: 15px;
+
+  }
+
+  .footerColumn1 {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+  
+  }
+  .h1{
+    margin-left: 10%;
+    color: #C39711;
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 30px;
+
+  }
+  .h11{
+    margin-left: 10%;
+    color: #C39711;
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 8px;
+
+  }
+
+  /* Second row styles */
+  .horizontalList {
+    display: flex;
+    height: 10%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .horizontalList a {
+font-weight: 500;
+cursor: pointer;
+font-size: medium;
+margin: 0 20px; /* Add space between each list item */
+
+  }
+
+  
+
+  
+  .rowicons{
+    display: flex;
+    flex-direction: row;
+    margin-left: 12%;
+    gap: 3px;
+
+  }
+
+  .rowicons2{
+    display: flex;
+    flex-direction: row;
+    margin-left: 10%;
+    margin-top: 10px;
+
+  }
+
+  .pLocation{
+    text-overflow: ellipsis;
+    max-width: 35ch;
+    line-height: 1;
+    font-weight: 400;
+    cursor: pointer;
+
+  }
+
+  .pMail{
+    text-overflow: ellipsis;
+    max-width: 35ch;
+    font-weight: 400;
+    cursor: pointer;
+margin-left: 10px;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+
+  }
+  .pLocation:hover{
+
+  }
+  .hLine{
+    width: 100%;
+
+display: flex;
+  }
+  .hLine2{
+    background-color: rgb(150, 150, 150);
+    width: 80%;
+    height: 1px;
+    margin:  auto; 
+    margin-bottom:10px ;
+
+  }
+
+
+
+
+}
+

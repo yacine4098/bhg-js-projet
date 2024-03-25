@@ -1,35 +1,18 @@
-import { Inter } from 'next/font/google'
+
+import { Inter, Mr_De_Haviland } from 'next/font/google'
 import Card_item from '@/components/card_item';
 import { useState , useEffect , useRef } from 'react';
+import { collection, getDocs ,query,orderBy } from 'firebase/firestore';
+import { db } from '@/lib/firebase'; // Adjust the path based on your project structure
+import Projects from '@/pages/about';
+import ActiveSlider from '@/components/ActiveSlider'
+
+import { useRouter } from 'next/router'; // Import useRouter hook for navigation
 
 
 
 const inter = Inter({ subsets: ['latin'] })
-const cards = [
-  {
-    title: 'Card 1',
-    description: 'This is the first card.',
-    imageUrl: 'https://placekitten.com/300/200', // Replace with your image URL
-  },
 
-  {
-    title: 'Card 1',
-    description: 'This is the first card.',
-    imageUrl: 'https://placekitten.com/300/200', // Replace with your image URL
-  },
-  {
-    title: 'Card 1',
-    description: 'This is the first card.',
-    imageUrl: 'https://placekitten.com/300/200', // Replace with your image URL
-  },
-  {
-    title: 'Card 1',
-    description: 'This is the first card.',
-    imageUrl: 'https://placekitten.com/300/200', // Replace with your image URL
-  },
-
-  
-];
 
 const contentData = [
   {
@@ -69,12 +52,19 @@ const contentData = [
 ];
 
 export default function Home() {
+  const router = useRouter(); // Initialize useRouter hook
+
+  const [products, setProducts] = useState([]);
+
+
+  const handleClick = () => {
+    router.push('/contact');
+  };
   const timerInterval = 5000; // 6000 milliseconds = 6 seconds
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const [direction, setDirection] = useState(1); // 1 for increment, -1 for decrement
-  const numberOfImages = 3; // Update this based on the number of images you have
 
   const changeContent = () => {
     setCurrentIndex((prevIndex) => (prevIndex + direction + contentData.length) % contentData.length);
@@ -94,6 +84,26 @@ export default function Home() {
   };
 
   useEffect(() => {
+
+    const fetchData = async () => {
+      try {
+        const querySnapshot = await getDocs(
+          query(
+            collection(db, 'your_collection_name'),
+            orderBy('or', 'asc'), // Order by 'soa' field in descending order
+          )
+        );
+                const data = querySnapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+        setProducts(data);
+      } catch (error) {
+        console.error('Error fetching data:', error.message);
+      }
+    };
+    const handleClick = () => {
+      router.push('/contact');
+    };
+    fetchData();
+
     startTimer();
 
     // Clear the interval when the component is unmounted
@@ -102,7 +112,7 @@ export default function Home() {
 
   const timerRef = useRef();
   return (
-          <main>
+          <main >
 
 <div className="imgslide">
       <div className="overlayimg"></div>
@@ -136,7 +146,7 @@ export default function Home() {
     onClick={() =>       {changeContent();resetTimer();} }
   />
 </div>
-<button className='overlayButton py-2 px-8'>Contact</button>
+<button  className='overlayButton py-2 px-8' onClick={handleClick}> Contact</button>
 
     </div>
 
@@ -151,31 +161,59 @@ export default function Home() {
 
           <div className='h-9'></div>
 
+          <Projects></Projects>
 
 
+    <ActiveSlider products={products}/>
+
+    <div className='h-14  '>  </div>
     <div className='ml-12 mb-2 font-bold text-black text-3xl sm:text-lg md:text-xl lg:text-2xl xl:text-3xl max-w-xs'>
-      Available houses
+      Our Features
     </div>
-
-
-
     <div className=' line ml-12 h-0.5 bg-slate-600'></div>
 
+<div className='allFeaturesBoxes'>           <div className='features-box'>
 
+<center>
+  <div className='mb-5 font-bold text-lg'>ELEVATOR</div>
+  <img height={'90px'} width={'90px'} src='elevator.png'></img>
+</center>
 
-      <div className='h-10 m '>  </div>
-      <div className="scroll-container overflow-x-auto whitespace-nowrap ml-10">
-      <div className="grid-container">
-        {cards.map((card, index) => (
-          <div key={index} className="inline-block max-w-xs">
-            <Card_item {...card} />
-          </div>
-        ))}
-      </div>
-    </div>
+ </div>
+ <div className='features-box'>
 
-      
-    </main>
+<center>
+  <div className='mb-5 font-bold text-lg'>PARKING</div>
+  <img height={'90px'} width={'90px'} src='parking.png'></img>
+</center>
+
+ </div>       <div className='features-box'>
+
+<center>
+  <div className='mb-5 font-bold text-lg'>PARK</div>
+  <img height={'90px'} width={'90px'} src='park.png'></img>
+</center>
+
+ </div>       <div className='features-box'>
+
+<center>
+  <div className='mb-5 font-bold text-lg'>MODERN HOUSE</div>
+  <img height={'90px'} width={'90px'} src='modern.png'></img>
+</center>
+
+ </div>       <div className='features-box'>
+
+<center>
+  <div className='mb-5 font-bold text-lg'>SECURITY</div>
+  <img height={'90px'} width={'90px'} src='camera.png'></img>
+</center>
+
+ </div>
+       </div>
+
+       <div className='h-10'></div>
+
+  </main>
 
   )
 }

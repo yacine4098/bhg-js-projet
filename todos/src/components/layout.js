@@ -31,29 +31,21 @@ const Layout = ({ children }) => {
         <ul className={styles.sidebar_nav}>
           <li>
             <a href="/" onClick={closeSidebar}>
-              <FontAwesomeIcon icon={faHome} /> Home
+              <FontAwesomeIcon icon={faHome} /> Accueil
             </a>
           </li>
           <li>
             <a href="/about" onClick={closeSidebar}>
-              <FontAwesomeIcon icon={faInfoCircle} /> About
+              <FontAwesomeIcon icon={faInfoCircle} /> À Propos
             </a>
           </li>
-          <li>
-            <a href="/services" onClick={closeSidebar}>
-              <FontAwesomeIcon icon={faBriefcase} /> Our Services
-            </a>
-          </li>
+
           <li>
             <a href="/projects" onClick={closeSidebar}>
-              <FontAwesomeIcon icon={faProjectDiagram} /> Our Projects
+              <FontAwesomeIcon icon={faProjectDiagram} /> Nos Produits
             </a>
           </li>
-          <li>
-            <a href="/investment" onClick={closeSidebar}>
-              <FontAwesomeIcon icon={faHandHoldingUsd} /> Investment
-            </a>
-          </li>
+
           <li>
             <a href="/contact" onClick={closeSidebar}>
               <FontAwesomeIcon icon={faEnvelope} /> Contact
@@ -61,12 +53,10 @@ const Layout = ({ children }) => {
           </li>
         </ul>
         <div className={styles.social_icons}>
-          <a href="#" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.facebook.com/bhg.promotion.immobiliere" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faFacebook} />
           </a>
-          <a href="#" target="_blank" rel="noopener noreferrer">
-            <FontAwesomeIcon icon={faTwitter} />
-          </a>
+
           <a href="#" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faInstagram} />
           </a>

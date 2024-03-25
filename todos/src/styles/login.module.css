@@ -1,0 +1,14 @@
+.login_box{
+    width: 340px;
+margin: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 250px;
+}
+
+.frm{
+
+}

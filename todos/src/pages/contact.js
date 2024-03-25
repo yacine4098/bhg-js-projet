@@ -3,11 +3,7 @@
 import CustomInput from '@/components/CustomInput';
 import React, { useEffect, useState } from 'react';
 import styles from '@/styles/card.module.css'
-import Link from 'next/link';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-famail
-} from '@fortawesome/free-solid-svg-icons';
+
 
 const Card = ({ title, description, imageUrl }) => {
   const [isMobileScreen, setIsMobileScreen] = useState(true);
@@ -51,38 +47,49 @@ const Card = ({ title, description, imageUrl }) => {
   <div className={styles.overlayText}>Contactez Nous</div>
   <img className={styles.img} src='cnmp.jpg' alt='Contact_Img_Slide' />
 
-  <div className={styles.divContact}>
-  <a className={styles.phoneIcon} href='tel:+123456789'>
-    <img className={styles.normalIcon} src='phone-fill.svg' alt='Normal Phone Icon' />
-    <img className={styles.hoverIcon} src='phone-fill2.svg' alt='Hover Phone Icon' />
-  </a>
 
-  <a className={styles.messIcon} href='tel:+1234569'>
-    <img className={styles.normalIcon2} src='messenger-fill.svg' alt='Normal Messenger Icon' />
-    <img className={styles.hoverIcon2} src='messenger-fill2.svg' alt='Hover Messenger Icon' />
-  </a>
-
-  </div>
 
 
   </div>
 
-  <div className='flex mt-20 justify-center gap-60'>
-    <div className={styles.clm2}>
-    <h1 className='text-center mt-5 text-white font-bold text-3xl'>Call Us</h1>
-    <h1 className='text-start mt-10 ml-10 text-white font-medium text-xl'>+213 669 63 38 73</h1>
-    <h1 className='text-start mt-10 ml-10 text-white font-medium text-xl'>+213 669 63 38 73</h1>
+<div className={styles.contdv}>
+  <div className={styles.child}>
+  <img src="glocation.png" alt="Location" className={styles.ic} />
+  <div className={styles.h999}>VISITEZ NOUS</div>
+  <a href='https://maps.app.goo.gl/5HxpVDrY939pvJMX9' target="_blank" className={styles.pLocation}> Boulevard Tella Ahcene Route de Cheraga Dely Brahim, Cheraga, Algeria  </a>
+<div className={styles.rowicons3}> 
+            <img src="time.png" alt="Time" style={{ width: '30px',height:'30px' }} />
+            <p className={styles.p999}> Samedi – Jeudi 09h00 – 16h00 </p>
 
 
-    </div>
-    <div className={styles.clm}>    <h1 className='text-center mt-5 text-black font-bold text-3xl'>Contact Us</h1>
-    <h1 className='text-start mt-10 ml-10 text-black font-semibold text-xl'>E-mail : Contact@bhg-immobilier.com</h1>
-    <h1 className='text-start mt-10 ml-10 text-black font-medium text-xl'>+213 669 63 38 73</h1></div>
+            </div>
+  </div>
+  <div className={styles.vLine}>
+  </div>
+  <div className={styles.child}>
+  <img src="gphone.png" alt="Phone" className={styles.ic}  />
+  <div className={styles.h999}>APPELEZ NOUS</div>
+<div className={styles.rowicons3}> 
+            <img src="phone-fill.png" alt="Phone" style={{ width: '30px',height:'30px' }} />
+            <a  href='tel:+213 770 65 6368' className={styles.pLocation}> +213 770 65 6368  </a>
+            
+
+
+            </div>
+            <div className={styles.rowicons4}> 
+            <img src="fax-phone.png" alt="Phone" style={{ width: '30px',height:'30px' }} />
+            <a  href='tel:023 14 12 57' className={styles.pLocation2}> 023 14 12 57  </a>
+            
+
+
+            </div>
 
   </div>
 
-  <div>
 </div>
+
+
+
 
     <div className={styles.cardborder}>
       <div className='text-white font-semibold px-3 my-2'> Contact </div>
@@ -121,6 +128,38 @@ const Card = ({ title, description, imageUrl }) => {
     </div>
 
     </div>
+
+    <iframe className='smmap m-auto '
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3196.5939650795085!2d2.964151474950445!3d36.75631607017364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128fb1f7c3ed07c1%3A0x6add910bf286563f!2sSARL%20BHG%20PROMOTION%20IMMOBILIERE!5e0!3m2!1sen!2sdz!4v1707219760312!5m2!1sen!2sdz"
+        width="380"
+        height="280"
+        style={{ border: '0' }}
+        allowFullScreen=""
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+      ></iframe>
+
+      {/* Map for screens from 620px to 1024px */}
+      <iframe className='mdmap m-auto  rounded-lg'
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3196.5939650795085!2d2.964151474950445!3d36.75631607017364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128fb1f7c3ed07c1%3A0x6add910bf286563f!2sSARL%20BHG%20PROMOTION%20IMMOBILIERE!5e0!3m2!1sen!2sdz!4v1707219760312!5m2!1sen!2sdz"
+        width="600"
+        height="380"
+        style={{ border: '0' }}
+        allowFullScreen=""
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+      ></iframe>
+
+      {/* Map for screens larger than 1024px */}
+      <iframe className='lgmap m-auto rounded-lg'
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3196.5939650795085!2d2.964151474950445!3d36.75631607017364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128fb1f7c3ed07c1%3A0x6add910bf286563f!2sSARL%20BHG%20PROMOTION%20IMMOBILIERE!5e0!3m2!1sen!2sdz!4v1707219760312!5m2!1sen!2sdz"
+        width="1000"
+        height="600"
+        style={{ border: '0' }}
+        allowFullScreen=""
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+      ></iframe>
     </main>
   );
 };

@@ -1,0 +1,52 @@
+/* dashboard.module.css */
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+
+.inputField {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.textareaField {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  resize: vertical; /* Allow vertical resizing of the textarea */
+}
+
+.fileInput {
+  margin-bottom: 10px;
+}
+
+.button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}

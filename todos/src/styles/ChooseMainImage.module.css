@@ -1,0 +1,93 @@
+/* styles/ChooseMainImage.module.css */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+
+  }
+  
+  .button {
+    display: block;
+    margin-top: 10px;
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .imageGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+  }
+  
+  .image {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease-in-out;
+  }
+  
+  .selected {
+    border-color: #4caf50;
+  }
+  
+  .modal {
+    /* Styles for the overlay */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 300;
+
+  }
+  
+  .content {
+    /* Styles for the modal content */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    width: 100%;
+
+  }
+  
+  .modal h2 {
+    color: #333;
+  }
+  
+  .modal p {
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  /* Close button style */
+  .closeButton {
+    background-color: #ddd;
+    color: #333;
+    border: none;
+    padding: 10px 15px;
+    margin-right: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* Dashboard button style */
+  .dashboardButton {
+    background-color: #0070f3;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+  }

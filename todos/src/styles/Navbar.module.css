@@ -1,30 +1,55 @@
+/* First Navbar with position fixed */
 .navbar {
   position: sticky;
   top: 0;
   width: 100%;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 50;
-    background-color: rgba(0, 0, 0, 0.808);
-    
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 51;
+  background-color: rgba(0, 0, 0, 0.808);
+  transition: opacity 0.2s ease 0.1s; /* Add transition with delay */
+}
 
-  }
-  
-  .logo img {
-    max-height: 150px;
-    border-radius: 20px;
-    padding: 5px;
+/* Second Navbar with position sticky */
+.navbar2 {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 50;
+  background-color: rgba(0, 0, 0, 0.808);
+  transition: opacity 0.2s ease 0.1s; /* Add transition with delay */
+}
 
-  }
-  
-  .navList {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .navList li {
-    margin-right: 20px;
-  }
+/* Hide first navbar when isScrolled is true */
+.navbar.hidden {
+  opacity: 0;
+}
+
+/* Hide second navbar when isScrolled is false */
+.navbar2.hidden {
+  opacity: 0;
+}
+
+/* Logo image transition */
+.logo img {
+  transition: width 0.3s ease, height 0.3s ease; /* Add transition for logo size change */
+}
+
+/* Navigation list styles */
+.navList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navList li {
+  margin-right: 20px;
+}
+
+/* Additional styles for the navbar items if needed */

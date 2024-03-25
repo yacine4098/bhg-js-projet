@@ -1,8 +1,16 @@
 // pages/projects.js
 import styles from '@/styles/about.module.css'
+import Gallery from '@/components/Gallery';
 
 
 const Projects = () => {
+
+  const images = [
+    'cover1.jpg',
+    'cover2.jpg',
+    'cover3.jpg',
+    // Add more images as needed
+  ];
    const style={width: '100%', color: 'black', fontSize: 20, fontFamily: 'Inika', fontWeight: '500', wordWrap: 'break-word' , textIndent: '2em' };
     return (
       <main>
@@ -23,6 +31,8 @@ Nous avons également introduit plusieurs nouvelles techniques de construction t
         <img src="pointing-sketch.jpg" alt="Image"  />
       </div>
     </div>
+
+
 
       </main>
     );
