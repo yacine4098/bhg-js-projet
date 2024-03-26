@@ -1,5 +1,5 @@
 // pages/ChooseMainImage.js
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Modal from 'react-modal'; // Import Modal from react-modal
 import styles from '@/styles/ChooseMainImage.module.css';
@@ -9,11 +9,21 @@ const ChooseMainImage = () => {
   const router = useRouter();
   const { id, houseName, houseDesc, imageUrls } = router.query;
 
-  // Parse the JSON strings into arrays
-  const parsedImageUrls = JSON.parse(imageUrls);
-
+  const [parsedImageUrls, setParsedImageUrls] = useState([]);
   const [mainImageIndex, setMainImageIndex] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  useEffect(() => {
+    // Parse the JSON strings into arrays when imageUrls change
+    try {
+      if (imageUrls) {
+        const parsedUrls = JSON.parse(imageUrls);
+        setParsedImageUrls(parsedUrls);
+      }
+    } catch (error) {
+      console.error('Error parsing imageUrls:', error.message);
+    }
+  }, [imageUrls]);
 
   const handleMainImageSelect = async () => {
     try {
@@ -32,7 +42,6 @@ const ChooseMainImage = () => {
   const closeModal = () => {
     setIsModalOpen(false);
     router.push('/dashboard');
-
   };
 
   return (
@@ -55,18 +64,18 @@ const ChooseMainImage = () => {
 
       {/* Modal */}
       <Modal
-  isOpen={isModalOpen}
-  onRequestClose={closeModal}
-  contentLabel="Success Modal"
-  overlayClassName={styles.modal}
-  className={styles.content}
->
-  <h2 className={styles.h2}>Success!</h2>
-  <p className={styles.p}>Data successfully inserted.</p>
-  <button className={styles.closeButton} onClick={closeModal}>
-    Close
-  </button>
-</Modal>
+        isOpen={isModalOpen}
+        onRequestClose={closeModal}
+        contentLabel="Success Modal"
+        overlayClassName={styles.modal}
+        className={styles.content}
+      >
+        <h2 className={styles.h2}>Success!</h2>
+        <p className={styles.p}>Data successfully inserted.</p>
+        <button className={styles.closeButton} onClick={closeModal}>
+          Close
+        </button>
+      </Modal>
     </div>
   );
 };

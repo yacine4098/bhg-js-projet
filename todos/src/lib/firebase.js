@@ -11,8 +11,7 @@ const firebaseConfig = {
   storageBucket: "bhg-cloud.appspot.com",
   messagingSenderId: "104316574452",
   appId: "1:104316574452:web:74f198023a1e51f738dca1",
-  measurementId: "G-K46VJGF4VX"
-};
+  measurementId: "G-K46VJGF4VX"};
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);

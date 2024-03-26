@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "server": "node server.js",
     "lint": "next lint"
+
   },
   "dependencies": {
     "@fortawesome/free-brands-svg-icons": "^6.5.1",
