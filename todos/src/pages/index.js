@@ -123,6 +123,8 @@ export default function Home() {
   return (
           <main >
       <Head>
+      <link rel="shortcut icon" href="BHG-LOGO.png" />
+
         <title>Home- BHG Immobilier</title>
       </Head>
 <div className="imgslide">

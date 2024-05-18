@@ -5,7 +5,7 @@ export default function Document() {
   return (
     <Html lang="en">
                           <Head>
-                          <link rel="shortcut icon" href="/bhg-logo.png" />
+                          <link rel="shortcut icon" href="BHG-LOGO.png" />
 
       </Head>
 
