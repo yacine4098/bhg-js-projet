@@ -4,6 +4,7 @@ import Gallery from '@/components/Gallery';
 import FlexibleBlog from '@/components/FlexibleBlog';
 import { collection, getDocs, where, query } from 'firebase/firestore';
 import { db } from '@/lib/firebase'; // Adjust the path based on your project structure
+import Head from 'next/head';
 
 const Gal = () => {
   const router = useRouter();
@@ -48,7 +49,11 @@ const Gal = () => {
 
 
   return (
+
     <main>
+                    <Head>
+        <title>{blogs[0].houseName}</title>
+      </Head>
       <div className="h-10"></div>
       {/* Render your gallery component here */}
 

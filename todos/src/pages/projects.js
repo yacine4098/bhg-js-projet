@@ -4,6 +4,7 @@ import { useState , useEffect } from 'react';
 import { collection, getDocs , query , orderBy } from 'firebase/firestore';
 import { db } from '@/lib/firebase'; // Adjust the path based on your project structure
 import ActiveSlider from '@/components/ActiveSlider'
+import Head from 'next/head';
 
 const ProjectsPage = () => {
 
@@ -32,6 +33,9 @@ const ProjectsPage = () => {
   }, []); // Re-run the effect when the direction changes
   return (
     <div>
+                    <Head>
+        <title>Projects- BHG Immobilier</title>
+      </Head>
     <ActiveSlider products={products}/>
 
     </div>

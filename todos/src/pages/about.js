@@ -1,6 +1,7 @@
 // pages/projects.js
 import styles from '@/styles/about.module.css'
 import Gallery from '@/components/Gallery';
+import Head from 'next/head';
 
 
 const Projects = () => {
@@ -14,6 +15,9 @@ const Projects = () => {
    const style={width: '100%', color: 'black', fontSize: 20, fontFamily: 'Inika', fontWeight: '500', wordWrap: 'break-word' , textIndent: '2em' };
     return (
       <main>
+              <Head>
+        <title>About- BHG Immobilier</title>
+      </Head>
          <div className="h-10"></div>;
          <div className={`${styles.whoare} flex justify-center items-center font-bold text-3xl`}>
 Who Are We ?</div>;

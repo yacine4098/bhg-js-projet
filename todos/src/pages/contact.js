@@ -3,6 +3,7 @@
 import CustomInput from '@/components/CustomInput';
 import React, { useEffect, useState } from 'react';
 import styles from '@/styles/card.module.css'
+import Head from 'next/head';
 
 
 const Card = ({ title, description, imageUrl }) => {
@@ -42,7 +43,9 @@ const Card = ({ title, description, imageUrl }) => {
 
     <main>
 
-
+<Head>
+        <title>Contact- BHG Immobilier</title>
+      </Head>
 <div className={styles.imgslide}>
   <div className={styles.overlayText}>Contactez Nous</div>
   <img className={styles.img} src='cnmp.jpg' alt='Contact_Img_Slide' />

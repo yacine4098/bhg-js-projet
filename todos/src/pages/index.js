@@ -7,6 +7,7 @@ import { db } from '@/lib/firebase'; // Adjust the path based on your project st
 import Projects from '@/pages/about';
 import ActiveSlider from '@/components/ActiveSlider'
 import LongTextWithReadMore from '@/components/LongTextWithReadMore';
+import Head from 'next/head';
 
 
 import { useRouter } from 'next/router'; // Import useRouter hook for navigation
@@ -121,7 +122,9 @@ export default function Home() {
   const timerRef = useRef();
   return (
           <main >
-
+      <Head>
+        <title>Home- BHG Immobilier</title>
+      </Head>
 <div className="imgslide">
       <div className="overlayimg"></div>
       <div className="overlayText" style={contentData[currentIndex].textStyle}>
