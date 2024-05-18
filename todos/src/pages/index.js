@@ -56,8 +56,8 @@ const contentData = [
 ];
 
 const images = [
-  { src: "https://firebasestorage.googleapis.com/v0/b/bhg-cloud.appspot.com/o/lesDunesWideC%20(1)%20(1).png?alt=media&token=210f760b-c4e0-4688-939f-8cb3624500a5", link: "/gal?id=nb5jf5" },
-  { src: "https://firebasestorage.googleapis.com/v0/b/bhg-cloud.appspot.com/o/mouradiaWideC%20(4)%20(1)%20(1).png?alt=media&token=14cf7024-5c5f-47b9-818b-90c674364ec9", link: "/gal?id=av0ypkr9b" } // Replace with your second image URL and link
+  { src: "https://firebasestorage.googleapis.com/v0/b/bhg-cloud.appspot.com/o/lesDunesWideC%20(1)%20(1).png?alt=media&token=210f760b-c4e0-4688-939f-8cb3624500a5", link: "/gal?id=résidence-les-dunes" },
+  { src: "https://firebasestorage.googleapis.com/v0/b/bhg-cloud.appspot.com/o/mouradiaWideC%20(4)%20(1)%20(1).png?alt=media&token=14cf7024-5c5f-47b9-818b-90c674364ec9", link: "/gal?id=résidence-elmouradia" } // Replace with your second image URL and link
 ];
 
 export default function Home() {
