@@ -6,8 +6,11 @@ import { collection, getDocs ,query,orderBy } from 'firebase/firestore';
 import { db } from '@/lib/firebase'; // Adjust the path based on your project structure
 import Projects from '@/pages/about';
 import ActiveSlider from '@/components/ActiveSlider'
+import LongTextWithReadMore from '@/components/LongTextWithReadMore';
+
 
 import { useRouter } from 'next/router'; // Import useRouter hook for navigation
+import ImageWithButton from '@/components/ImageWithButton';
 
 
 
@@ -49,6 +52,11 @@ const contentData = [
 
   },
   // Add more content as needed
+];
+
+const images = [
+  { src: "https://firebasestorage.googleapis.com/v0/b/bhg-cloud.appspot.com/o/lesDunesWideC%20(1)%20(1).png?alt=media&token=210f760b-c4e0-4688-939f-8cb3624500a5", link: "/gal?id=nb5jf5" },
+  { src: "https://firebasestorage.googleapis.com/v0/b/bhg-cloud.appspot.com/o/mouradiaWideC%20(4)%20(1)%20(1).png?alt=media&token=14cf7024-5c5f-47b9-818b-90c674364ec9", link: "/gal?id=av0ypkr9b" } // Replace with your second image URL and link
 ];
 
 export default function Home() {
@@ -157,11 +165,17 @@ export default function Home() {
   <button className='btn-invest py-2 px-7 text-base  '>Invest</button>
 
 </div>
+<div className='aa  h-10'></div>
 
+
+<ImageWithButton images={images} />
+
+
+<div className='aa  h-10'></div>    
 
           <div className='h-9'></div>
 
-          <Projects></Projects>
+          <LongTextWithReadMore></LongTextWithReadMore>
 
 
     <ActiveSlider products={products}/>

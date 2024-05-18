@@ -19,14 +19,19 @@ const Projects = () => {
 Who Are We ?</div>;
 
          <div className={styles.twoColumnContainer}>
-    <div className={styles.textContainer }>
+         <div className={styles.textContainer}>
+  <p style={style}>
+    BHG promotion immobilière, spécialisée dans la conception, la réalisation et la vente d’appartement dans le cadre promotionnel, nos résidences proposent des appartement du F2, F3, F4 et des duplex au niveau de chéraga, les dunes et dely brahim en cours de réalisation qui répondent à tous les modes de vie contemporains, les plans ont été conçus avec le plus grand soin et les intérieurs raffinés offre un bien être et un confort qui invitent à de beaux moment de convivialités et de sérénité, les espaces aux beaux volumes ont été pensées au prisme de la lumière et des matériaux pour offrir une performance énergétique acoustique et thermique sans pareille tout en respectant l’intimité totale des appartement.
+  </p>
+  <p style={style}>
+    Doté d’une Architecture épurée, finition de luxe portes d’entrées blindés, pré climatisation, chauffage central, ascenseur vidéophone double vitrage isolation thermique et phonique BHG fournit un service personnalisé et attentionné qui travaille en étroite avec ses client pour comprendre leurs besoins et leurs exigences afin de leur offrir les solutions les plus adaptées. Enfin nous sommes fiers de notre engagement envers la qualité et l’intégrité, nous sommes une entreprise éthique et respectueuse de l’environnement et nous travaillons dur pour être un leader dans notre industrie en matière de pratiques commerciales durable.
+  </p>
+  <p style={style}>
+    Nous espérons que cette présentation vous donne un aperçu de notre entreprise et de notre engagement envers nos clients. Si vous chercher un partenaire de confiance pour vous accompagner dans votre projet immobilier N’hésitez pas à nous contacter pour en savoir plus sur nos services.
+  </p>
+</div>
 
-<p style={style}>      EURL BELAID – Société créée en 2001, spécialisée dans la construction immobilière sise a Alger, Algerie .<br/><br/></p>
-<p style={style}>  La société a jusqu’à présent réalisé plusieurs projets immobiliers comme celui de Ben Merabet – Bordj El Kiffan, Alger Un magnifique projet dans un site calme à proximité de l’aéroport international d’Alger, entouré d’installations d’importance régionale.<br/><br/></p>
-<p style={style}>        De plus, nous réalisons tous types d’aménagement d’espaces tels que terrasses, jardins et piscines.
-Nous avons également introduit plusieurs nouvelles techniques de construction telles que la E3D, la construction antisismique et la construction modulaire.</p>
 
-      </div>
       <div className={styles.imageContainer}>
         <img src="pointing-sketch.jpg" alt="Image"  />
       </div>
@@ -40,4 +45,3 @@ Nous avons également introduit plusieurs nouvelles techniques de construction t
   };
   
   export default Projects;
-  
