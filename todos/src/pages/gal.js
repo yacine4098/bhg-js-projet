@@ -6,6 +6,7 @@ import { collection, getDocs, where, query } from 'firebase/firestore';
 import { db } from '@/lib/firebase'; // Adjust the path based on your project structure
 import Head from 'next/head';
 
+
 const Gal = () => {
   const router = useRouter();
   const { id } = router.query;
@@ -39,12 +40,20 @@ const Gal = () => {
   }, [id]);
 
   if (!blogs[0]) {
-    return <center>No project .</center>;
-  }
+    return (
+      <div className="flex items-center justify-center h-screen">
+        {/* Use your preferred loading indicator, for example, a spinner or circle */}
+        <div className="animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-purple-500"></div>
+      </div>
+    );  }
 
   if (loading) {
-    return <div>Loading...</div>;
-  }
+    return (
+      <div className="flex items-center justify-center h-screen">
+        {/* Use your preferred loading indicator, for example, a spinner or circle */}
+        <div className="animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-purple-500"></div>
+      </div>
+    );  }
 
 
 
