@@ -63,14 +63,8 @@ const Gal = () => {
                     <Head>
         <title>{blogs[0].houseName}</title>
       </Head>
-      <div className="h-10"></div>
       {/* Render your gallery component here */}
 
-    <div></div>
-      <Gallery name={blogs[0].houseName} desc={blogs[0].houseDesc} mainUrl={blogs[0].mainUrl} images={blogs[0].imageUrls} />
-      <div className="h-10"></div>
-      {/* Render your blog component here */}
-      
       {blogs[0].blogs && blogs[0].blogs.length > 0 ? (
       <FlexibleBlog title="Title 1" content={blogs[0].blogs} />
     ) : (
@@ -80,6 +74,13 @@ const Gal = () => {
     )}
 
     <div className='h-10 '></div>
+
+    <div></div>
+      <Gallery name={blogs[0].houseName} desc={blogs[0].houseDesc} mainUrl={blogs[0].mainUrl} images={blogs[0].imageUrls} />
+      <div className="h-10"></div>
+      {/* Render your blog component here */}
+      
+
 
     <iframe className='MapPro rounded-lg'
         src={blogs[0].src}

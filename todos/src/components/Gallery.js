@@ -86,11 +86,7 @@ const Gallery = ({ mainUrl,images ,name , desc }) => {
       )}
     </div>
 
-    <div className='secdiv'>
-      <div className='mainText'>{name}</div>
-      <div className='descText'>{desc}</div>
 
-    </div>
 
 
     </div>

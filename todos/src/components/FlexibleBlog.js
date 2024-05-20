@@ -1,16 +1,21 @@
-// components/FlexibleBlog.js
 import React from 'react';
-import styles from '@/styles/flexible.module.css'
+import styles from '@/styles/flexible.module.css';
 
 const FlexibleBlog = ({ title, content }) => {
   return (
     <div className={styles.main}>
-      <h1 className={styles.title2}>{"title of demo"}</h1>
       {content.map((element, index) => {
+        
         if (element.type === 'text') {
-          return <p className={styles.paragraph} key={index}>{element.value}</p>;
-        } else if (element.type === 'image') {
-          return <img className={styles.img} key={index} src={element.value} alt={"element.alt"} />;
+          return (<div  className={styles.mainP}>  
+            <h1 className='mainText '>Résidence El Mouradia </h1>
+            <p className={styles.paragraph} key={index}>{element.value}</p> 
+            </div>);
+        }
+         else if (element.type === 'image') {
+          return (<div  className={styles.img}>  
+<img className={styles.img2} key={index} src={element.value} alt="Blog element image" />
+            </div>);
         }
         return null; // Handle other types if needed
       })}
