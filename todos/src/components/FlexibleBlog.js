@@ -8,7 +8,7 @@ const FlexibleBlog = ({ title, content }) => {
         
         if (element.type === 'text') {
           return (<div  className={styles.mainP}>  
-            <h1 className='mainText '>Résidence El Mouradia </h1>
+            <h1 className='mainText ' key={index}>{element.title} </h1>
             <p className={styles.paragraph} key={index}>{element.value}</p> 
             </div>);
         }
