@@ -71,7 +71,7 @@ const uploadImageUrlsToFirestore = async (collectionName, documentId, imageUrls)
   
 
 // Usage example
-const folderPath = '/images/lesDunes';
+const folderPath = '/zouaoua';
 const collectionName = 'your_collection_name';
 const documentId = '4FonJHnDF5AMWd3raD1E';
 
