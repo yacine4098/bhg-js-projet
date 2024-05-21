@@ -134,8 +134,7 @@ const Card = ({ title, description, imageUrl }) => {
 
     <iframe className='smmap m-auto '
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3196.5939650795085!2d2.964151474950445!3d36.75631607017364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128fb1f7c3ed07c1%3A0x6add910bf286563f!2sSARL%20BHG%20PROMOTION%20IMMOBILIERE!5e0!3m2!1sen!2sdz!4v1707219760312!5m2!1sen!2sdz"
-        width="380"
-        height="280"
+
         style={{ border: '0' }}
         allowFullScreen=""
         loading="lazy"
